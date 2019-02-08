@@ -1,0 +1,132 @@
+/**
+ * derived from `black.scss`
+ */
+
+.reveal .code,
+.reveal pre,
+.reveal code {
+  font-family: 'Fira Mono', monospace;
+  border-radius: 5px;
+  background-color: #131313;
+  padding: 1em;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.title {
+  font-size: 52px !important;
+}
+
+$vibrantYellow: #ffd700;
+$subtleGray: #666677;
+$salmon: #d68d72;
+$lightBlue: #8addff;
+$blue: #3c9dda;
+$fuchsia: #d081c4;
+$oak: #d9daa2;
+$lightOlive: #b5cea8;
+$darkOlive: #5bb498;
+
+.tx-version,
+.tx-input-count,
+.tx-output-count,
+.tx-outpoint-hash,
+.tx-outpoint-index,
+.tx-sequence-number,
+.tx-value,
+.tx-unlocking-script,
+.tx-locking-script,
+.tx-locktime {
+  color: $subtleGray;
+  transition: color 1s;
+}
+
+.tx:hover {
+  .tx-version {
+    color: $salmon !important;
+  }
+  .tx-input-count,
+  .tx-output-count {
+    color: $vibrantYellow;
+  }
+
+  .tx-outpoint-hash {
+    color: $fuchsia;
+  }
+  .tx-outpoint-index,
+  .tx-sequence-number {
+    color: $subtleGray;
+  }
+  .tx-value {
+    color: $oak;
+  }
+  .tx-unlocking-script {
+    color: $darkOlive;
+  }
+  .tx-locking-script {
+    color: $blue;
+  }
+
+  .tx-locktime {
+    color: $subtleGray;
+  }
+}
+
+.tx-spread span {
+  display: block;
+  text-align: left;
+  margin: 2px;
+  font-size: 18px;
+  &.comment {
+    display: inline;
+    color: $lightBlue;
+  }
+}
+
+// Default mixins and settings -----------------
+@import '../template/mixins';
+@import '../template/settings';
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 42px;
+$mainFont: 'Fira Sans', sans-serif;
+$headingFont: 'Fira Sans', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+section.has-light-background {
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #222;
+  }
+}
+
+// Theme template ------------------------------
+@import '../template/theme';
+// ---------------------------------------------

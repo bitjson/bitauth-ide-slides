@@ -1,49 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Bitcoin Script for Beginners</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/bitauth.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- <section>
+          <h1 class="title">Bitcoin Script for Beginners</h1>
+          <p><br /></p>
+          <p>Jason Dreyzehner</p>
+          <a href="https://twitter.com/bitjson">@bitjson</a>
+          <p><br /></p>
+          <a href="https://bitauth.com">bitauth.com</a>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+          <small>(sneak peak)</small>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section>
+          <h2>Poll</h2>
+          <p>Heard about Bitcoin Script before this talk?</p>
+          <p class="fragment">Tried to learn/write scripts?</p>
+          <p class="fragment">Spent from a custom script?</p>
+        </section>
+
+        <section>
+          <h2>I'm going to say &ldquo;Bitcoin&rdquo;</h2>
+          <br />
+          <p>
+            But this talk applies to BTC, BCH, and BSV.
+          </p>
+          <br />
+        </section>
+
+        <section>
+          <h4>Part 1</h4>
+          <h2>Bitcoin Transactions</h2>
+        </section>
+
+        <section>
+          <h3>Transactions</h3>
+          <br />
+          <p>some addresses &rarr; other addresses</p>
+          <br />
+          <p class="fragment">inputs &rarr; outputs</p>
+        </section>
+
+        <section>
+          <h3>Transactions: Deconstructed</h3>
+          <small class="code tx" style="word-break: break-all">
+            <span class="tx-version">01000000</span
+            ><span class="tx-input-count">01</span
+            ><span class="tx-outpoint-hash"
+              >bdd84c0a10482ee004977ae99cdf7109b9b640f21d54cccafef1315c9d346a81</span
+            ><span class="tx-outpoint-index">01000000</span
+            ><span class="tx-unlocking-script"
+              >6b483045022100c1f209db2e8efb2e90ef054bd100f4c2badba4ce5f0710141cf19969bc63065c02203f34b4c6dd8f19355dc457dbd01273f006faab8abf29b670debcdc1e3f551d0a412103adf90e9560aa579e128a64f7c4f024fe32031a9f7550f6f6e511db3f8e062a08</span
+            ><span class="tx-sequence-number">00000000</span
+            ><span class="tx-output-count">03</span
+            ><span class="tx-value">c8cf030000000000</span
+            ><span class="tx-locking-script"
+              >1976a914deedd3c18efe2b2c6838e8bacca056cd4aacf8d388ac</span
+            ><span class="tx-value">c8cf030000000000</span
+            ><span class="tx-locking-script"
+              >1976a914bc07ca234f8ff0dbe26513ee093312aa4f21be0a88ac</span
+            ><span class="tx-value">0000000000000000</span
+            ><span class="tx-locking-script"
+              >0e6a04010101010762697461757468</span
+            ><span class="tx-locktime">00000000</span>
+          </small>
+          <br /><br />
+        </section> -->
+
+        <section>
+          <h3>Transactions: Deconstructed</h3>
+          <small class="code tx tx-spread" style="word-break: break-all">
+            <span class="tx-version"
+              >01000000 <span class="comment">&larr; version</span></span
+            >
+            <span class="tx-input-count"
+              >01 <span class="comment">&larr; number of inputs</span></span
+            >
+            <span class="tx-outpoint-hash"
+              >bdd84c0a10482ee004977ae99cdf7109b9b640f21d54cccafef1315c9d346a81
+              <span class="comment">&larr; txid 1</span></span
+            >
+            <span class="tx-outpoint-index"
+              >01000000
+              <span class="comment">&larr; outpoint index 1</span></span
+            >
+            <span class="tx-unlocking-script"
+              >6b483045022100c1f209db2e8efb2e90ef054bd100f4c2badba4ce5f0710141cf19969bc63065c02203f34b4c6dd8f19355dc457dbd01273f006faab8abf29b670debcdc1e3f551d0a412103adf90e9560aa579e128a64f7c4f024fe32031a9f7550f6f6e511db3f8e062a08
+              <span class="comment">&larr; unlocking script 1</span></span
+            >
+            <span class="tx-sequence-number"
+              >00000000
+              <span class="comment">&larr; sequence number 1</span></span
+            >
+            <span class="tx-output-count"
+              >03 <span class="comment">&larr; number of outputs</span></span
+            >
+            <span class="tx-value"
+              >c8cf030000000000
+              <span class="comment"
+                >&larr; value 1 (249800 satoshis)</span
+              ></span
+            >
+            <span class="tx-locking-script"
+              >1976a914deedd3c18efe2b2c6838e8bacca056cd4aacf8d388ac
+              <span class="comment">&larr; locking script 1</span></span
+            >
+            <span class="tx-value"
+              >c8cf030000000000
+              <span class="comment">&larr; value 2</span></span
+            >
+            <span class="tx-locking-script"
+              >1976a914bc07ca234f8ff0dbe26513ee093312aa4f21be0a88ac
+              <span class="comment">&larr; locking script 2</span></span
+            >
+            <span class="tx-value"
+              >0000000000000000
+              <span class="comment">&larr; value 3</span></span
+            >
+            <span class="tx-locking-script"
+              >0e6a04010101010762697461757468
+              <span class="comment">&larr; locking script 3</span></span
+            >
+            <span class="tx-locktime"
+              >00000000 <span class="comment">&larr; locktime</span></span
+            >
+          </small>
+          <br /><br />
+        </section>
+
+        <section></section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## BitAuth IDE
+
+            - low-level language for bitcoin script
+
+            - compiler with support for keys and variables
+
+            - IDE and line-by-line interactive debugger
+					</textarea
+          >
+        </section>
+
+        <section>
+          <h3>Demo – Sneak Peak</h3>
+          <p>low-level language for bitcoin script</p>
+          <p>compiler with support for keys and variables</p>
+          <p>an IDE and line-by-line interactive debugger</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>

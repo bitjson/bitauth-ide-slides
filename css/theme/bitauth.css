@@ -64,6 +64,27 @@ body {
     display: inline;
     color: #8addff; }
 
+.tx-spread:hover .comment {
+  color: transparent; }
+
+.tx-spread:hover .tx-unlocking-script {
+  color: #d9daa2; }
+
+.tx-spread:hover .tx-locking-script {
+  color: #8addff; }
+
+.lock .bytecode {
+  color: #8addff; }
+
+.lock .bytes {
+  color: #5bb498; }
+
+.lock .checksig {
+  color: #d081c4; }
+
+.lock .standard {
+  color: #3c9dda; }
+
 section.has-light-background,
 section.has-light-background h1,
 section.has-light-background h2,

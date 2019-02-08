@@ -85,6 +85,33 @@ $darkOlive: #5bb498;
   }
 }
 
+.tx-spread:hover {
+  .comment {
+    color: transparent;
+  }
+  .tx-unlocking-script {
+    color: $oak;
+  }
+  .tx-locking-script {
+    color: $lightBlue;
+  }
+}
+
+.lock {
+  .bytecode {
+    color: $lightBlue;
+  }
+  .bytes {
+    color: $darkOlive;
+  }
+  .checksig {
+    color: $fuchsia;
+  }
+  .standard {
+    color: $blue;
+  }
+}
+
 // Default mixins and settings -----------------
 @import '../template/mixins';
 @import '../template/settings';

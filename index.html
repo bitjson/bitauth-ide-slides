@@ -60,10 +60,54 @@
             But this talk applies to BTC, BCH, and BSV.
           </p>
           <br />
+        </section> -->
+
+        <!-- <section>
+          <h4>Part 1</h4>
+          <h2>Storing Bitcoin</h2>
+        </section> -->
+
+        <section>
+          <h3>Common Security Options</h3>
+          <ul>
+            <br />
+            <li>Single device (&ldquo;P2PKH&rdquo;)</li>
+            <br />
+            <li>Multi-device (&ldquo;P2SH Multisig&rdquo;)</li>
+            <br />
+            <li class="fragment">Something else?</li>
+          </ul>
         </section>
 
         <section>
-          <h4>Part 1</h4>
+          <h4>Example – High-Security Business Wallet</h4>
+          <br />
+          <ul>
+            <li>2-of-2 – normally each co-owner must approve transactions.</li>
+            <br />
+            <li>
+              Recovery – if either loses their wallet, a trusted lawyer can
+              approve transactions.
+            </li>
+            <br />
+            <li>
+              <b>
+                *Lawyer can't approve transactions until 30 days later.
+              </b>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Bitcoin Script</h3>
+          <br />
+          <p>
+            A programming language for authentication.
+          </p>
+        </section>
+
+        <section>
+          <h4>Part 2</h4>
           <h2>Bitcoin Transactions</h2>
         </section>
 
@@ -99,11 +143,10 @@
             ><span class="tx-locktime">00000000</span>
           </small>
           <br /><br />
-        </section> -->
+        </section>
 
         <section>
-          <h3>Transactions: Deconstructed</h3>
-          <small class="code tx tx-spread" style="word-break: break-all">
+          <small class="code tx-spread" style="word-break: break-all">
             <span class="tx-version"
               >01000000 <span class="comment">&larr; version</span></span
             >
@@ -132,7 +175,7 @@
             <span class="tx-value"
               >c8cf030000000000
               <span class="comment"
-                >&larr; value 1 (249800 satoshis)</span
+                >&larr; value 1 (249,800 satoshis)</span
               ></span
             >
             <span class="tx-locking-script"
@@ -162,7 +205,44 @@
           <br /><br />
         </section>
 
-        <section></section>
+        <section>
+          <h3>Example Script</h3>
+          <div>
+            <p>
+              <small class="code lock">
+                <span class="bytecode">
+                  76a914deedd3c18efe2b2c6838e8bacca056cd4aacf8d388ac
+                </span></small
+              >
+            </p>
+          </div>
+          <div class="fragment">
+            <p>&darr;</p>
+            <p>
+              <small class="code lock">
+                <span class="bytecode">76 a9 14</span>
+                <span class="bytes"
+                  >deedd3c18efe2b2c6838e8bacca056cd4aacf8d388</span
+                >
+                <span class="bytecode">ac</span>
+              </small>
+            </p>
+          </div>
+          <div class="fragment">
+            <p>&darr;</p>
+            <p>
+              <small class="code lock">
+                <span class="standard">OP_DUP OP_HASH160 OP_PUSHBYTES_20</span>
+                <span class="bytes">(20 bytes)</span>
+                <span class="checksig">OP_CHECKSIG</span>
+              </small>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h1>Demo Time</h1>
+        </section>
 
         <section data-markdown>
           <textarea data-template>

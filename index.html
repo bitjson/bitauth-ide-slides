@@ -42,15 +42,15 @@
           <a href="https://bitauth.com">bitauth.com</a>
         </section>
 
-        <section>
+        <!-- <section>
           <small>(sneak peak)</small>
-        </section>
+        </section> -->
 
         <section>
           <h2>Poll</h2>
           <p>Heard about Bitcoin Script before this talk?</p>
-          <p class="fragment">Tried to learn/write scripts?</p>
-          <p class="fragment">Spent from a custom script?</p>
+          <p class="fragment">Tried to learn Bitcoin Script?</p>
+          <p class="fragment">Written a locking/unlocking script?</p>
         </section>
 
         <section>
@@ -75,8 +75,8 @@
             <br />
             <li>Multi-device (&ldquo;P2SH Multisig&rdquo;)</li>
             <br />
-            <li class="fragment">Something else?</li>
           </ul>
+          <p class="fragment">Something else?</p>
         </section>
 
         <section>
@@ -206,7 +206,7 @@
         </section>
 
         <section>
-          <h3>Example Script</h3>
+          <h3>Decoding Locking Script 1</h3>
           <div>
             <p>
               <small class="code lock">
@@ -222,8 +222,9 @@
               <small class="code lock">
                 <span class="bytecode">76 a9 14</span>
                 <span class="bytes"
-                  >deedd3c18efe2b2c6838e8bacca056cd4aacf8d388</span
+                  >deedd3c18efe2b2c6838e8bacca056cd4aacf8d3</span
                 >
+                <span class="bytecode">88</span>
                 <span class="bytecode">ac</span>
               </small>
             </p>
@@ -234,14 +235,11 @@
               <small class="code lock">
                 <span class="standard">OP_DUP OP_HASH160 OP_PUSHBYTES_20</span>
                 <span class="bytes">(20 bytes)</span>
+                <span class="standard">OP_EQUALVERIFY</span>
                 <span class="checksig">OP_CHECKSIG</span>
               </small>
             </p>
           </div>
-        </section>
-
-        <section>
-          <h1>Demo Time</h1>
         </section>
 
         <section>
@@ -303,6 +301,10 @@
             />
           </svg>
           <br /><br />
+        </section>
+
+        <section>
+          <h1>Demo Time</h1>
         </section>
 
         <section>
